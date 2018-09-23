@@ -80,6 +80,20 @@ abstract class DFS {
         System.out.print(v + " ");
     }
 
+    // Is v an ancestor of u
+    public boolean isAncestor(final int u, final int v) {
+        // v -> () -> () ... -> u
+        // ---entry(v)----entry(u)----exit(u)----exit(v)--> t
+        final int entryDiff = entryTime[u] - entryTime[v];
+        final int exitDiff = exitTime[v] - exitTime[u];
+
+        return entryDiff > 0 && exitDiff > 0;
+    }
+
+    public int getNumberOfDescendants(final int u) {
+        return (exitTime[u] - entryTime[u]) / 2;
+    }
+
     /*
      * For an undirected graph a edge x -- y will be processed two times. Once when x is discovered and again when
      * y is discovered. This method will return true if the edge is discovered the first time.
