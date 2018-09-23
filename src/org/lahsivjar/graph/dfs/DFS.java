@@ -42,7 +42,6 @@ abstract class DFS {
         for (int u : graph.getEdges(s)) {
             // s -> u
             if (!discovered[u]) {
-                discovered[u] = true;
                 parent[u] = s;
                 processEdge(s, u);
                 dfs(u);
