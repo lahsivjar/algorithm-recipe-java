@@ -77,6 +77,9 @@ public class ArticulationVertices extends DFS {
                 }
             }
 
+            // NOTE: the difference between parent articulation vertex and bridge articulation vertex.
+            // For a bridge articulation vertex earliest reachable ancestor of u must be u
+            // For a parent articulation vertex earliest reachable ancestor of u must be parent of u
             if (earliestReachableAncestor[u] == parent[u]) {
                 System.out.println("Parent articulation vertex: " + parent[u]);
             }
@@ -120,7 +123,7 @@ public class ArticulationVertices extends DFS {
     }
 
     public static void main(String[] args) {
-        final Graph testGraph = GraphLibrary.graph1();
+        final Graph testGraph = GraphLibrary.graph3();
         testGraph.printGraph();
 
         final ArticulationVertices av = new ArticulationVertices(testGraph);

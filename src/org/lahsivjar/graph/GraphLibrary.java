@@ -39,4 +39,18 @@ public class GraphLibrary {
 
         return graph;
     }
+
+    public static Graph graph3() {
+        // (0) --- (1) --- (2)
+        //  |
+        //  |
+        // (3)
+
+        final Graph graph = new AdjList(4, false);
+        graph.addEdge(0, 1);
+        graph.addEdge(0, 3);
+        graph.addEdge(1, 2);
+
+        return graph;
+    }
 }
