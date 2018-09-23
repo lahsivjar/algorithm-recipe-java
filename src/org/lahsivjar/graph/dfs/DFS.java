@@ -10,6 +10,15 @@ import java.util.Arrays;
  *
  * 1. It classifies vertex based on entry and exit times
  * 2. It classifies edges based on tree edge or back edge
+ *
+ * Types of edges in a graph:
+ * There are a total of 4 types of edges possible in a graph:
+ * 1. Tree edge
+ * 2. Back edge
+ * 3. Forward edge
+ * 4. Cross edge
+ *
+ * NOTE: In DFS every edge is either tree edge and back edge
  */
 abstract class DFS {
     private int time;
