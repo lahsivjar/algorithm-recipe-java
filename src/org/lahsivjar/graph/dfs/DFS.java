@@ -56,6 +56,21 @@ abstract class DFS {
         processed[s] = true;
     }
 
+    /**
+     * Will print a path from u -> v in the DFS tree of the graph
+     * @param u the source vertex
+     * @param v the destination vertex
+     */
+    public void printPath(final int u, final int v) {
+        if (u == v || parent[v] == -1) {
+            System.out.print(v + " ");
+            return;
+        }
+
+        printPath(u, parent[v]);
+        System.out.print(v + " ");
+    }
+
     /*
      * For an undirected graph a edge x -- y will be processed two times. Once when x is discovered and again when
      * y is discovered. This method will return true if the edge is discovered the first time.
@@ -66,10 +81,9 @@ abstract class DFS {
                 // If graph is directed then it must be the first encounter for edge u -> v
                 (graph.isDirected())
                 // For an undirected graph an edge u -> v is discovered first time under following circumstances:
-                        // 1. v is undiscovered (which is taken care of in the actual dfs code
-                        // 2. v is processed (which means the edge must be discovered as v -> u while processing v)
-                        // 3. v is unprocessed and parent of u is not equals to v
-                || (!processed[v] && parent[u] != v);
+                        // 1. v is undiscovered (which is taken care of in the actual dfs code)
+                        // 2. v is unprocessed and parent of u is not equals to v
+                || (discovered[v] && !processed[v] && parent[u] != v);
     }
 
     public void printState() {
