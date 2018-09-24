@@ -28,7 +28,7 @@ public class SimpleSearch extends DFS {
     }
 
     public static void main(String[] args) {
-        final Graph testGraph = GraphLibrary.graph2();
+        final Graph testGraph = GraphLibrary.graph2(false);
         testGraph.printGraph();
 
         final SimpleSearch search = new SimpleSearch(testGraph);

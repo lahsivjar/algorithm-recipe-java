@@ -36,7 +36,7 @@ public class CycleDetectionUndirectedGraph extends DFS {
     }
 
     public static void main(String[] args) {
-        final Graph testGraph = GraphLibrary.graph1();
+        final Graph testGraph = GraphLibrary.graph1(false);
 
         final CycleDetectionUndirectedGraph cycle = new CycleDetectionUndirectedGraph(testGraph);
         cycle.dfs(0);

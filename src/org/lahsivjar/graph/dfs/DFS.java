@@ -18,7 +18,8 @@ import java.util.Arrays;
  * 3. Forward edge
  * 4. Cross edge
  *
- * NOTE: In DFS every edge is either tree edge and back edge
+ * NOTE: In DFS for undirected graph every edge is either tree edge and back edge. In a DFS for directed graph all
+ * types of edges can be encountered.
  */
 abstract class DFS {
     private int time;
@@ -106,6 +107,10 @@ abstract class DFS {
                 // For an undirected graph an edge u -> v is discovered first time under following circumstances:
                         // 1. v is undiscovered (which is taken care of in the actual dfs code)
                         // 2. v is unprocessed and parent of u is not equals to v
+                        //
+                        // Note that in below condition for directed graph processed[v] will never be true
+                        // in-fact since DFS for undirected graph only has tree edge and back edge, processed
+                        // array can be removed for this case
                 || (discovered[v] && !processed[v] && parent[u] != v);
     }
 

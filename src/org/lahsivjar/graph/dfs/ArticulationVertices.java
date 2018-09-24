@@ -120,7 +120,7 @@ public class ArticulationVertices extends DFS {
     }
 
     public static void main(String[] args) {
-        final Graph testGraph = GraphLibrary.graph3();
+        final Graph testGraph = GraphLibrary.graph3(false);
         testGraph.printGraph();
 
         final ArticulationVertices av = new ArticulationVertices(testGraph);
