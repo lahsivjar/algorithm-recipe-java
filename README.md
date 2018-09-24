@@ -1,6 +1,7 @@
+# Algorithm Recipe
 Common algorithm implementations for self reference.
 
-Graph:
+1. Graph:
   - Representation:
       - [Adjacency List](src/org/lahsivjar/graph/AdjList.java)
   - DFS:
