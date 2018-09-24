@@ -86,9 +86,6 @@ public class ArticulationVertices extends DFS {
         }
 
         // Second: we update the earliest reachable ancestor for parent of u
-        final int entryTimeForEarliestAncestor_u = entryTime[earliestReachableAncestor[u]];
-        final int entryTimeForEarliestAncestor_parentOfu = entryTime[earliestReachableAncestor[parent[u]]];
-
         if (entryTime[earliestReachableAncestor[u]] < entryTime[earliestReachableAncestor[parent[u]]]) {
             earliestReachableAncestor[parent[u]] = earliestReachableAncestor[u];
         }
