@@ -55,7 +55,7 @@ public class GraphLibrary {
     }
 
     public static Graph graph4(boolean directed) {
-        //   .---> (2) -> (5)
+        //   ----> (2) -> (5)
         //  |       ^    /
         //  |       |   /
         //  |       |  /

@@ -6,7 +6,8 @@ import org.lahsivjar.graph.GraphLibrary;
 import java.util.Arrays;
 
 /**
- * Point 1: Conectivity of a graph is defined as the minimum number of vertices to remove so that the graph can be disconnected.
+ * Point 1: Connectivity of an undirected graph is defined as the minimum number of vertices to remove so that the graph
+ * can be disconnected.
  * Point 2: An articulation vertex is a vertex which is a single point of failure i.e. removing it disconnects the graph.
  *
  * With both point 1 and point 2 under consideration a graph with connectivity 1 will have an articulation vertex or a
@@ -22,6 +23,9 @@ public class ArticulationVertices extends DFS {
 
     public ArticulationVertices(Graph g) {
         super(g);
+        if (g.isDirected()) {
+            throw new IllegalArgumentException("Only for undirected graphs");
+        }
         this.earliestReachableAncestor = new int[g.size()];
         this.treeOutDegree = new int[g.size()];
     }
