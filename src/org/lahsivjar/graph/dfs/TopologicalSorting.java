@@ -63,7 +63,7 @@ public class TopologicalSorting extends DFS {
     }
 
     public static void main(String[] args) {
-        final Graph testGraph = GraphLibrary.graph2(true);
+        final Graph testGraph = GraphLibrary.graph6(true);
 
         final TopologicalSorting tsort = new TopologicalSorting(testGraph);
         tsort.sort();
