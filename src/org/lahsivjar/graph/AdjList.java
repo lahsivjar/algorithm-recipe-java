@@ -1,6 +1,8 @@
 package org.lahsivjar.graph;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class AdjList implements Graph {
 
@@ -38,6 +40,13 @@ public class AdjList implements Graph {
     @Override
     public LinkedList<Integer> getEdges(int s) {
         return graphRep.get(s);
+    }
+
+    @Override
+    public List<Integer> getVertices() {
+        return IntStream.range(0, nodeCount)
+                .boxed()
+                .collect(Collectors.toList());
     }
 
     @Override
