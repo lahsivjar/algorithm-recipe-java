@@ -54,7 +54,7 @@ public class DirectedGraphEdgeClassification extends DFS {
     }
 
     public static void main(String[] args) {
-        final Graph testGraph = GraphLibrary.graph4(true);
+        final Graph testGraph = GraphLibrary.graph5(true);
 
         final DirectedGraphEdgeClassification cycle = new DirectedGraphEdgeClassification(testGraph);
         cycle.dfs(0);

@@ -79,4 +79,36 @@ public class GraphLibrary {
         return graph;
     }
 
+    public static Graph graph5(boolean directed) {
+        //   ----> (0) <-----
+        //  |       |        |
+        //  |       |        |
+        //  |       .        |
+        // (2) <-- (1) ---> (3) ---> (7)
+        //          |        |        |
+        //          |        |        |
+        //          .        .        |
+        //         (4) ---> (5) <-----
+        //          ^        |
+        //          |        |
+        //          |        .
+        //           ------ (6)
+
+        final Graph graph = new AdjList(8, directed);
+        graph.addEdge(0, 1);
+        graph.addEdge(1, 2);
+        graph.addEdge(1, 3);
+        graph.addEdge(1, 4);
+        graph.addEdge(2, 0);
+        graph.addEdge(3, 0);
+        graph.addEdge(3, 5);
+        graph.addEdge(3, 7);
+        graph.addEdge(4, 5);
+        graph.addEdge(5, 6);
+        graph.addEdge(6, 4);
+        graph.addEdge(7, 5);
+
+        return graph;
+    }
+
 }
