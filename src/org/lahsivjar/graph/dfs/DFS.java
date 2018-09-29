@@ -21,7 +21,7 @@ import java.util.Arrays;
  * In DFS for undirected graph every edge is either tree edge and back edge. In a DFS for directed graph all
  * types of edges can be encountered.
  *
- * NOTE: This is a generic implementation. For a specific application of bfs some of the fields may not be required.
+ * NOTE: This is a generic implementation. For a specific application of dfs some of the fields may not be required.
  */
 abstract class DFS {
     private int time;
