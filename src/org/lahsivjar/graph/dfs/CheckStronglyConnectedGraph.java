@@ -25,7 +25,7 @@ public class CheckStronglyConnectedGraph extends DFS {
     public CheckStronglyConnectedGraph(Graph g) {
         super(g);
         if (!graph.isDirected()) {
-            throw new IllegalArgumentException("Only for undirected graphs");
+            throw new IllegalArgumentException("Only for directed graphs");
         }
     }
 
