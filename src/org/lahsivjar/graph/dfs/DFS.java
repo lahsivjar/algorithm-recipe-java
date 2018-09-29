@@ -39,11 +39,24 @@ abstract class DFS {
         this.entryTime = new int[g.size()];
         this.exitTime = new int[g.size()];
         this.time = 0;
-
-        Arrays.fill(parent, -1);
     }
 
+    private void init() {
+        Arrays.fill(discovered, false);
+        Arrays.fill(processed, false);
+        Arrays.fill(parent, -1);
+        Arrays.fill(entryTime, 0);
+        Arrays.fill(exitTime, 0);
+        this.time = 0;
+    }
+
+    // Public code to properly initialize state so that actual dfs code can be called
     public void dfs(final int s) {
+        init();
+        dfsUtil(s);
+    }
+
+    private void dfsUtil(final int s) {
         discovered[s] = true;
         entryTime[s] = ++time;
 
@@ -54,7 +67,7 @@ abstract class DFS {
             if (!discovered[u]) {
                 parent[u] = s;
                 processEdge(s, u);
-                dfs(u);
+                dfsUtil(u);
             } else if (needToProcessEdge(s, u)) {
                 processEdge(s, u);
             }

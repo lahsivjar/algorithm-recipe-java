@@ -2,6 +2,7 @@ package org.lahsivjar.graph.bfs;
 
 import org.lahsivjar.graph.Graph;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -25,7 +26,15 @@ abstract class BFS {
         this.processed = new boolean[graph.size()];
     }
 
+    private void init() {
+        this.queue.clear();
+        Arrays.fill(parent, -1);
+        Arrays.fill(discovered, false);
+        Arrays.fill(processed, false);
+    }
+
     public void bfs(final int s) {
+        init();
         queue.add(s);
         discovered[s] = true;
 
