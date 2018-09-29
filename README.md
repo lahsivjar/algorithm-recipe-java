@@ -4,6 +4,9 @@ Common algorithm implementations for self reference.
 1. Graph:
   - Representation:
       - [Adjacency List](src/org/lahsivjar/graph/AdjList.java)
+  - BFS:
+      - [BFS basic code](src/org/lahsivjar/graph/bfs/BFS.java)
+      - [BFS simple search](src/org/lahsivjar/graph/bfs/SimpleSearch.java)
   - DFS:
       - [DFS basic code](src/org/lahsivjar/graph/dfs/DFS.java)
       - [DFS simple search](src/org/lahsivjar/graph/dfs/SimpleSearch.java)
