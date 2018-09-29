@@ -5,20 +5,20 @@ Common algorithm implementations for self reference.
     - Representation:
         - [Adjacency List](src/org/lahsivjar/graph/AdjList.java)
     - BFS:
-        - [BFS basic code](src/org/lahsivjar/graph/bfs/BFS.java)
-        - [BFS simple search](src/org/lahsivjar/graph/bfs/SimpleSearch.java)
-        - [BFS unweighted graph shortest path](src/org/lahsivjar/graph/bfs/UnweightedShortestPath.java)
-        - [BFS unweighted graph connected component](src/org/lahsivjar/graph/bfs/ConnectedComponent.java)
-        - [BFS two coloring graph](src/org/lahsivjar/graph/bfs/BipartiteGraph.java)
+        - [Basic code](src/org/lahsivjar/graph/bfs/BFS.java)
+        - [Simple search](src/org/lahsivjar/graph/bfs/SimpleSearch.java)
+        - [Unweighted graph shortest path](src/org/lahsivjar/graph/bfs/UnweightedShortestPath.java)
+        - [Unweighted graph connected component](src/org/lahsivjar/graph/bfs/ConnectedComponent.java)
+        - [Two coloring graph](src/org/lahsivjar/graph/bfs/BipartiteGraph.java)
     - DFS:
-        - [DFS basic code](src/org/lahsivjar/graph/dfs/DFS.java)
-        - [DFS simple search](src/org/lahsivjar/graph/dfs/SimpleSearch.java)
-        - [DFS undirected graph cycle detection](src/org/lahsivjar/graph/dfs/CycleDetectionUndirectedGraph.java)
-        - [DFS undirected graph articulation vertices](src/org/lahsivjar/graph/dfs/ArticulationVertices.java)
-        - [DFS directed graph edge classification](src/org/lahsivjar/graph/dfs/DirectedGraphEdgeClassification.java)
-        - [DFS DAG topological sort](src/org/lahsivjar/graph/dfs/TopologicalSorting.java)
-        - [DFS DG check strongly connected](src/org/lahsivjar/graph/dfs/CheckStronglyConnectedGraph.java)
-        - [DFS DG find strongly connected components](src/org/lahsivjar/graph/dfs/StronglyConnectedComponent.java)
+        - [Basic code](src/org/lahsivjar/graph/dfs/DFS.java)
+        - [Simple search](src/org/lahsivjar/graph/dfs/SimpleSearch.java)
+        - [Undirected graph cycle detection](src/org/lahsivjar/graph/dfs/CycleDetectionUndirectedGraph.java)
+        - [Undirected graph articulation vertices](src/org/lahsivjar/graph/dfs/ArticulationVertices.java)
+        - [Directed graph edge classification](src/org/lahsivjar/graph/dfs/DirectedGraphEdgeClassification.java)
+        - [Directed acyclic graph(DAG) topological sort](src/org/lahsivjar/graph/dfs/TopologicalSorting.java)
+        - [Directed graph check strongly connected](src/org/lahsivjar/graph/dfs/CheckStronglyConnectedGraph.java)
+        - [Directed graph find strongly connected components](src/org/lahsivjar/graph/dfs/StronglyConnectedComponent.java)
 
 Sources:
 - CLRS
