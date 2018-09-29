@@ -14,6 +14,8 @@ public interface Graph {
 
     List<Integer> getVertices();
 
+    Graph transpose();
+
     void printGraph();
 
 }

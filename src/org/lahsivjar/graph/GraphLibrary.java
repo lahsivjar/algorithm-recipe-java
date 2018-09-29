@@ -131,4 +131,25 @@ public class GraphLibrary {
         return graph;
     }
 
+    public static Graph graph7(boolean directed) {
+        // (0) --> (1)
+        //  ^       |
+        //  |       |
+        //  |       .
+        // (3) <-- (2) --> (4)
+        //  ^               |
+        //  |               |
+        //   ---------------
+
+        final Graph graph = new AdjList(5, directed);
+        graph.addEdge(0, 1);
+        graph.addEdge(1, 2);
+        graph.addEdge(2, 3);
+        graph.addEdge(2, 4);
+        graph.addEdge(3, 0);
+        graph.addEdge(4, 3);
+
+        return graph;
+    }
+
 }

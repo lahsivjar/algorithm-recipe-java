@@ -50,6 +50,21 @@ public class AdjList implements Graph {
     }
 
     @Override
+    // Reverse the edges of the graph
+    public Graph transpose() {
+        final Graph transposeGraph = new AdjList(nodeCount, directed);
+        // Note that transpose of a un-directed graph is same
+        for (int i = 0; i < graphRep.size(); i++) {
+            final LinkedList<Integer> l = graphRep.get(i);
+            for (int j : l) {
+                transposeGraph.addEdge(j, i);
+            }
+        }
+
+        return transposeGraph;
+    }
+
+    @Override
     public void printGraph() {
         for (int j = 0; j < graphRep.size(); j++) {
             System.out.print("head -> " + j);

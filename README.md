@@ -11,6 +11,7 @@ Common algorithm implementations for self reference.
       - [DFS undirected graph articulation vertices](src/org/lahsivjar/graph/dfs/ArticulationVertices.java)
       - [DFS directed graph edge classification](src/org/lahsivjar/graph/dfs/DirectedGraphEdgeClassification.java)
       - [DFS DAG topological sort](src/org/lahsivjar/graph/dfs/TopologicalSorting.java)
+      - [DFS DG check strongly connected](src/org/lahsivjar/graph/dfs/CheckStronglyConnectedGraph.java)
 
 Sources:
 - CLRS
