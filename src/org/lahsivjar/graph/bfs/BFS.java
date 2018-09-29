@@ -7,7 +7,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Implementation of breadth first search algorithm
+ * Implementation of breadth first search algorithm.
+ * NOTE: This is a generic implementation. For a specific application of bfs some of the fields may not be required.
  */
 abstract class BFS {
 

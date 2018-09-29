@@ -18,8 +18,10 @@ import java.util.Arrays;
  * 3. Forward edge
  * 4. Cross edge
  *
- * NOTE: In DFS for undirected graph every edge is either tree edge and back edge. In a DFS for directed graph all
+ * In DFS for undirected graph every edge is either tree edge and back edge. In a DFS for directed graph all
  * types of edges can be encountered.
+ *
+ * NOTE: This is a generic implementation. For a specific application of bfs some of the fields may not be required.
  */
 abstract class DFS {
     private int time;
