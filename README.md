@@ -8,6 +8,7 @@ Common algorithm implementations for self reference.
         - [BFS basic code](src/org/lahsivjar/graph/bfs/BFS.java)
         - [BFS simple search](src/org/lahsivjar/graph/bfs/SimpleSearch.java)
         - [BFS unweighted graph shortest path](src/org/lahsivjar/graph/bfs/UnweightedShortestPath.java)
+        - [BFS unweighted graph connected component](src/org/lahsivjar/graph/bfs/ConnectedComponent.java)
     - DFS:
         - [DFS basic code](src/org/lahsivjar/graph/dfs/DFS.java)
         - [DFS simple search](src/org/lahsivjar/graph/dfs/SimpleSearch.java)

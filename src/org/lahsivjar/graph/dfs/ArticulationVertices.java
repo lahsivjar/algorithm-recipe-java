@@ -12,6 +12,11 @@ import java.util.Arrays;
  *
  * With both point 1 and point 2 under consideration a graph with connectivity 1 will have an articulation vertex or a
  * graph with an articulation vertex will have connectivity 1.
+ *
+ * NOTE: For directed graph articulation vertices are of two types, weak articulation vertices and strong articulation
+ * vertices. They can be understood simply as a vertex removing which increases the corresponding type of connected
+ * component. For weak articulation point we can use the same algorithm as this class by replacing the edges of the
+ * directed graph with undirected ones.
  */
 public class ArticulationVertices extends DFS {
 

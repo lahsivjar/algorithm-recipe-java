@@ -152,4 +152,14 @@ public class GraphLibrary {
         return graph;
     }
 
+    public static Graph graph8(boolean directed) {
+        // (0) --> (1) (2) (3) --> (4)
+
+        final Graph graph = new AdjList(5, directed);
+        graph.addEdge(0, 1);
+        graph.addEdge(3, 4);
+
+        return graph;
+    }
+
 }
