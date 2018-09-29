@@ -63,6 +63,27 @@ abstract class BFS {
         }
     }
 
+    /**
+     * Prints the path from source vertex (for which dfs was executed) to destination vertex taken as parameter
+     * @param destination the destination vertex
+     */
+    public void printPath(final int destination) {
+        final int parentNode = parent[destination];
+        if (parentNode == -1) {
+            System.out.printf("Head: %d", destination);
+            return;
+        }
+        printPath(parentNode);
+        System.out.printf(" -> %d", destination);
+    }
+
+    public void printParent() {
+        System.out.println("----------------------------------");
+        System.out.println("Parent array:");
+        System.out.println(Arrays.toString(parent));
+        System.out.println("----------------------------------");
+    }
+
     abstract void processVertexEarly(int u);
 
     abstract void processEdge(int u, int v);

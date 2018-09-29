@@ -27,11 +27,9 @@ public class SimpleSearch extends BFS {
         System.out.println("Processed: " + v);
     }
 
-
     public static void main(String[] args) {
         final Graph testGraph = GraphLibrary.graph2(false);
         testGraph.printGraph();
-
         final SimpleSearch search = new SimpleSearch(testGraph);
         search.bfs(0);
     }
